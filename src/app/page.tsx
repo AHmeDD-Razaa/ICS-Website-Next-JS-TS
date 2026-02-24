@@ -11,6 +11,7 @@ import Contact from "@/section/Contact";
 import Footer from "./components/Footer";
 
 
+
 export default function Home() {
   return (
     <div className="bg-[#111928]">

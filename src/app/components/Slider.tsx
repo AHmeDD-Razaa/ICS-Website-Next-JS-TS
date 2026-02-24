@@ -1,11 +1,11 @@
 "use client";
 
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-
 import "swiper/css";
 
-export default function Slider({ data }: { data: { img: string }[] }) {
+export default function Slider({ children }: { children: React.ReactNode }) {
   return (
     <Swiper
       modules={[Autoplay]}
@@ -19,17 +19,12 @@ export default function Slider({ data }: { data: { img: string }[] }) {
       slidesPerView={2}
       breakpoints={{
         640: { slidesPerView: 3 },
-        1024: { slidesPerView: 4 },
-        1280: { slidesPerView: 5 },
+        1024: { slidesPerView: 5 },
       }}
     >
-      {data.map((item, index) => (
-        <SwiperSlide key={index} className="flex items-center justify-center">
-          <img
-            src={item.img}
-            alt=""
-            className="object-cover  transition"
-          />
+      {React.Children.map(children, (child, index) => (
+        <SwiperSlide key={index} className="flex justify-center items-center">
+          {child}
         </SwiperSlide>
       ))}
     </Swiper>

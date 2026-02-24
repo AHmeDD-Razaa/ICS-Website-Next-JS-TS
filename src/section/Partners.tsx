@@ -1,3 +1,4 @@
+import Box from '@/app/components/Box'
 import Heading from '@/app/components/Heading'
 import Slider from '@/app/components/Slider'
 
@@ -18,7 +19,19 @@ export default function Partners() {
       <Heading text={"Our Partners"} />
 
       <div className="pt-15">
-        <Slider data={data} />
+       <Slider>
+                             {data.map((item, index) => (
+                               <Box
+                                 key={index}
+                                 image={
+                                   <img
+                                     src={item.img}
+                                     className="object-cover transition"
+                                   />
+                                 }
+                               />
+                             ))}
+                           </Slider>
       </div>
     </div>
   )

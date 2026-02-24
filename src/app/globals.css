@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
-
+body{
+  background-color:#111928
+}
+ 
 @font-face {
   font-family: "Mundial Regular";
   src: url("/font/MundialNarrow-Regular-BF67624ba586d07.otf") format("opentype");
