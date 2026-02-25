@@ -1,6 +1,11 @@
 import React from 'react'
 import Header from '../components/Header'
 import Heading from '../components/Heading'
+import Vision from '@/section/Vision'
+import Reviews from '@/section/Reviews'
+import Minds from '@/section/Minds'
+import Contact from '@/section/Contact'
+import Footer from '../components/Footer'
 
 export default function page() {
     return (
@@ -22,6 +27,13 @@ export default function page() {
                 <img src="/images/AboutUs.jpg" className='w-full h-150 ' alt="" />
             </div>
             </div>
+            <Vision />
+            <Reviews />
+            <div className='pt-37.5' >
+                <Minds />
+            </div>
+            <Contact />
+            <Footer />
             
         </div>
     )
