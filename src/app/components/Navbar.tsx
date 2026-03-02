@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <div className="lg:hidden relative">
       {/* Hamburger button */}
-      <button onClick={toggleNav} className="text-white text-xl" aria-label="Toggle Menu">
+      <button onClick={toggleNav} className="text-white text-xl" >
         <i className="fa-solid fa-bars"></i>
       </button>
 
@@ -22,7 +22,7 @@ export default function Navbar() {
       {isOpen && (
          <ul className="
         fixed left-0 top-0
-        h-auto w-40
+        h-screen w-[50%]
         flex flex-col gap-6
       bg-[#29303E]
         p-6

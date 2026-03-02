@@ -1,11 +1,36 @@
-import React from "react";
+"use client"
+import { log } from "node:console";
+import React, { useState } from "react";
 
 export default function Contact() {
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+  const [phone, setPhone] = useState("")
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const api = await fetch("https://staging-api.icsglobal.ae/api/v1/users/contact/create", {
+      method: "POST",
+      body: JSON.stringify({
+        name,
+        email,
+        message,
+        phone
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    })
+    const result = await api.json()
+    console.log("POST DATA:", result)
+    setName("")
+  }
+
   return (
-    <div className="max-lg:px-3 mt-15 lg:mt-25 xl:mt-45 relative bg-[url('/images/background.png')] bg-cover bg-center py-10 lg:py-[125px]">
+    <div className="max-lg:px-3  relative bg-[url('/images/background.png')] bg-cover bg-center py-10 lg:py-[125px]">
       <div className="container mx-auto backdrop-blur-md md:px-20 px-3 pt-8 pb-5 md:pb-11">
-        
-        {/* top bar */}
+
+
         <div className="flex items-center justify-between">
           <img src="/images/iCSLOGO.png" alt="logo" className="max-md:max-w-32.5" />
 
@@ -15,10 +40,10 @@ export default function Contact() {
           </button>
         </div>
 
-        {/* content */}
+
         <div className="grid grid-cols-2 mt-8 gap-15">
-          
-          {/* left side */}
+
+
           <div className="text-white col-span-2 lg:col-span-1">
             <ul className="pb-5">
               <li className="font-mundial-regular">• Contact Us</li>
@@ -47,40 +72,48 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* right side form */}
+
           <div className=" col-span-2 lg:col-span-1">
-            <form className="text-white">
-              
+            <form onSubmit={handleSubmit} className="text-white">
+
               <label htmlFor="name" className="font-mundial-bold text-[16px] mb-3 block">Full Name</label>
               <input
                 type="text"
+                value={name}
                 id="name"
                 placeholder="First name"
                 className="mb-7 outline-none border-b px-3 py-4 w-full"
+                onChange={(e) => setName(e.target.value)}
               />
 
               <label htmlFor="email" className="font-mundial-bold text-[16px] mb-3 block">Email</label>
               <input
                 type="text"
                 id="email"
+                value = {email}
                 placeholder="you@gmail.com"
                 className="mb-7 outline-none border-b px-3 py-4 w-full"
+                onChange={(e) => setEmail(e.target.value)}
               />
 
               <label htmlFor="number" className="font-mundial-bold text-[16px] mb-3 block">Phone Number</label>
               <input
                 type="number"
                 id="number"
+                value={phone}
                 placeholder="+671 800234756"
                 className="mb-7 outline-none border-b px-3 py-4 w-full"
+                onChange={(e) => setPhone(e.target.value)}
               />
 
               <label htmlFor="message" className="font-mundial-bold text-[16px] mb-3 block">Message</label>
               <input
                 type="text"
                 id="message"
+                value={message}
                 placeholder="Type"
                 className="mb-7 outline-none border-b px-3 py-4 w-full"
+                onChange={(e) => setMessage(e.target.value)}
               />
 
               <button className="border rounded-[60px] flex items-center justify-center gap-x-2.5 px-2 py-1.5 lg:px-4 lg:py-2">

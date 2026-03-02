@@ -19,7 +19,7 @@ export default function page() {
                         <h2  className=' text-white font-bold text-6xl'> About Us</h2>
                     </div>
                     <div className="col-span-7 text-[#E2E2E2]">
-                        <p>Welcome to [Platform Name], the ultimate multi-vendor platform designed to connect businesses with trusted suppliers across various industries. We act as the sole intermediary, ensuring secure communication, seamless service delivery, and efficient contract management between members and vendors.</p>
+                        <p>Welcome to ICS, the ultimate multi-vendor platform designed to connect businesses with trusted suppliers across various industries. We act as the sole intermediary, ensuring secure communication, seamless service delivery, and efficient contract management between members and vendors.</p>
                         <p className='pt-5'>Our platform is built to simplify business operations, providing a one-stop solution for marketing, public relations, event management, digital media, and corporate services. With a commitment to excellence, we bring together leading suppliers and businesses, fostering collaborations that drive success.</p>
 
                     </div>
@@ -30,7 +30,7 @@ export default function page() {
             <Vision />
             <Reviews />
             <div className='pt-37.5' >
-                <Minds />
+                <Minds button={false}/>
             </div>
             <Contact />
             <Footer />

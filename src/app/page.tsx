@@ -17,13 +17,15 @@ export default function Home() {
     <div className="bg-[#111928]">
      <Header />
      <VideoSec />
-     <Services />
+     <Services heading={true} button={true} />
      <Clients />
      <Excellence />
      <Portfolio />
      <Partners />
      <Minds />
-     <Contact />
+     <div className="mt-15 lg:mt-25 xl:mt-45">
+      <Contact />
+     </div>
      <Footer />
     </div>
   );

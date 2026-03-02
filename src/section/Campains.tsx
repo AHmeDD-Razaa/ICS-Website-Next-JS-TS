@@ -4,7 +4,7 @@ import Box from '../app/components/Box';
 import Button from '../app/components/Button';
 import { log } from 'node:console';
 
-export default async function Campains() {
+export default async function Campains({button}:{button?:boolean}) {
     const res = await fetch(
         "https://staging-api.icsglobal.ae/api/v1/users/category/get-all",
         { cache: "no-store" }
@@ -32,7 +32,7 @@ export default async function Campains() {
                             </div>}
                     </div>
                     <div className='flex justify-center items-center '>
-                        <Button text={'Request Services'} image={true}  />
+                        {button && <Button text={'Request Services'} image={true}  />}
 
                     </div>
                 </div>

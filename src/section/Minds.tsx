@@ -2,7 +2,7 @@ import Button from '@/app/components/Button'
 import Heading from '@/app/components/Heading'
 import React from 'react'
 
-export default function Minds() {
+export default function Minds({button}:{button?:boolean}) {
     const Data = [
         {
             img: "/images/projects.png",
@@ -49,7 +49,7 @@ export default function Minds() {
                 ))}
             </div>
             <div className="flex justify-center items-center">
-                <Button text='Explore More' image ={true} />
+                {button && <Button text='Explore More' image ={true} />}
             </div>
             
         </div>

@@ -14,11 +14,11 @@ export default function Footer() {
                 <li>Subscription</li>
                 <li>Contact Us</li>
             </ul>
-            <div className="flex justify-center items-center  gap-x-2.5 lg:ml-25.75">
+            <div className="flex justify-center items-center  gap-x-5 lg:ml-25.75">
                 <button className="hover:bg-white group border rounded-full"><img className="group-hover:brightness-0 p-3 " src="/images/brand-dribbble.png" alt=""/></button>
-                <button className="hover:bg-white group border rounded-full"><img className="group-hover:brightness-0 p-3 " src="/images/brand-dribbble.png" alt=""/></button>
-                <button className="hover:bg-white group border rounded-full"><img className="group-hover:brightness-0 p-3 " src="/images/brand-dribbble.png" alt=""/></button>
-                <button className="hover:bg-white group border rounded-full"><img className="group-hover:brightness-0 p-3 " src="/images/brand-dribbble.png" alt=""/></button>
+                <button className="hover:bg-white group border rounded-full"><img className="group-hover:brightness-0 p-3 " src="/images/fb.png" alt=""/></button>
+                <button className="hover:bg-white group border rounded-full"><img className="group-hover:brightness-0 p-3 " src="/images/git.png" alt=""/></button>
+                <button className="hover:bg-white group border rounded-full"><img className="group-hover:brightness-0 p-3 " src="/images/insta.png" alt=""/></button>
             </div>
         </div>
         <div className="flex md:px-20 py-5  md:py-17.5">    

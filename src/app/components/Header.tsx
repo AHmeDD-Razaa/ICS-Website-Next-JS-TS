@@ -11,9 +11,9 @@ export default function Header() {
                 <li ><a className='font-mundial-medium text-[#888C93] hover:text-white' href="/">Home</a></li>
                 <li ><a className='font-mundial-medium text-[#888C93] hover:text-white' href="/services">Services</a></li>
                 <li ><a className='font-mundial-medium text-[#888C93] hover:text-white' href="/aboutus">About Us</a></li>
-                <li ><a className='font-mundial-medium text-[#888C93] hover:text-white' href="">Portfolio</a></li>
-                <li ><a className='font-mundial-medium text-[#888C93] hover:text-white' href="">Subscription</a></li>
-                <li ><a className='font-mundial-medium text-[#888C93] hover:text-white' href="">Contact Us</a></li>
+                <li ><a className='font-mundial-medium text-[#888C93] hover:text-white' href="/portfolio">Portfolio</a></li>
+                <li ><a className='font-mundial-medium text-[#888C93] hover:text-white' href="/subscription">Subscription</a></li>
+                <li ><a className='font-mundial-medium text-[#888C93] hover:text-white' href="/contactus">Contact Us</a></li>
             </ul>
             <div className="md:ml-15 flex items-center gap-5 ">
                 <Navbar />
