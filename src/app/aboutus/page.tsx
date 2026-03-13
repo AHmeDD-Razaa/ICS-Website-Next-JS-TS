@@ -10,7 +10,7 @@ import Footer from '../components/Footer'
 export default function page() {
     return (
         <div>
-            <Header />
+            
             <div className='bg-[#0C1120]'>
                 <div className="container mx-auto pt-22.5  ">
                 <p className='text-[#85888F] pb-5' >Home  <span className='hover:text-white'> / Services</span> </p>
@@ -33,7 +33,7 @@ export default function page() {
                 <Minds button={false}/>
             </div>
             <Contact />
-            <Footer />
+            
             
         </div>
     )

@@ -1,6 +1,8 @@
 "use client"
 import { log } from "node:console";
 import React, { useState } from "react";
+import {  toast } from "react-toastify";
+
 
 export default function Contact() {
   const [name, setName] = useState("")
@@ -9,21 +11,30 @@ export default function Contact() {
   const [phone, setPhone] = useState("")
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const api = await fetch("https://staging-api.icsglobal.ae/api/v1/users/contact/create", {
+    const api = await fetch("https://staging-api.suya.ae/api/v1/public/contactus", {
       method: "POST",
       body: JSON.stringify({
         name,
         email,
         message,
-        phone
+        subject: phone
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
     })
     const result = await api.json()
+    if (api.ok) {
+      toast.success(result?.message || "Message Sent Successfully!");
+      setName("")
+      setEmail("")
+      setMessage("")
+      setPhone("")
+    } else {
+      toast.error(result?.message || "Something went wrong!");
+    }
     console.log("POST DATA:", result)
-    setName("")
+
   }
 
   return (
@@ -90,7 +101,7 @@ export default function Contact() {
               <input
                 type="text"
                 id="email"
-                value = {email}
+                value={email}
                 placeholder="you@gmail.com"
                 className="mb-7 outline-none border-b px-3 py-4 w-full"
                 onChange={(e) => setEmail(e.target.value)}
@@ -126,6 +137,9 @@ export default function Contact() {
 
         </div>
       </div>
+
+      
+
     </div>
   );
 }

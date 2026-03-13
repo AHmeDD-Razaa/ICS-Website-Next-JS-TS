@@ -1,13 +1,10 @@
 import React from 'react'
-import Header from '../components/Header'
 import Banner from '../components/Banner'
-import Footer from '../components/Footer'
 import SubscriptionPlan from '../components/SubscriptionPlan'
 
 export default function Page() {
     return (
         <div>
-            <Header />
             <Banner text1={'Subscription'} text2={'subscription plans'} text3={'Select from best plan, ensuring a perfect match. Need more or less? Customize your subscription for a seamless fit!'} />
             <div className="container mx-auto pt-15 pb-13 ">
                 <div className="flex gap-5 items-center">
@@ -22,18 +19,16 @@ export default function Page() {
                         text2={'Best for personal use.'} text3={'$10'} />
                 </div>
                 <div className="col-span-4">
-                    <SubscriptionPlan image={<img src={"/images/Ellipse.png"} className='rounded-full p-2.5 bg-[#6B7079] hover:bg-white' />} text1={'Basic'}
-                        text2={'Best for personal use.'} text3={'$10'} />
+                    <SubscriptionPlan image={<img src={"/images/Ellipse.png"} className='rounded-full p-2.5 bg-[#6B7079] hover:bg-white' />} text1={'Enterprise'}
+                        text2={'Best for personal use.'} text3={'$20'} />
                 </div>
                 <div className="col-span-4">
-                    <SubscriptionPlan image={<img src={"/images/Ellipse.png"} className='rounded-full p-2.5 bg-[#6B7079] hover:bg-white' />} text1={'Basic'}
-                        text2={'Best for personal use.'} text3={'$10'} />
+                    <SubscriptionPlan image={<img src={"/images/Ellipse.png"} className='rounded-full p-2.5 bg-[#6B7079] hover:bg-white' />} text1={'Business'}
+                        text2={'Best for personal use.'} text3={'$120'} />
                 </div>
 
             </div>
             </div>
-
-            <Footer />
         </div>
     )
 }

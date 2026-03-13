@@ -11,22 +11,20 @@ import Contact from "@/section/Contact";
 import Footer from "./components/Footer";
 
 
-
 export default function Home() {
   return (
     <div className="bg-[#111928]">
-     <Header />
-     <VideoSec />
-     <Services heading={true} button={true} />
-     <Clients />
-     <Excellence />
-     <Portfolio />
-     <Partners />
-     <Minds />
-     <div className="mt-15 lg:mt-25 xl:mt-45">
-      <Contact />
-     </div>
-     <Footer />
+
+      <VideoSec />
+      {/* <Services heading={true} button={true} /> */}
+      <Clients />
+      <Excellence />
+      {/* <Portfolio /> */}
+      <Partners />
+      <Minds />
+      <div className="mt-15 lg:mt-25 xl:mt-45">
+        <Contact />
+      </div>
     </div>
   );
 }
