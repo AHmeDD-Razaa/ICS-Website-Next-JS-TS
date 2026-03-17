@@ -3,6 +3,7 @@ import ProfileButton from '@/app/components/ProfileButton'
 import React, { useState } from 'react'
 import { toast } from 'react-toastify';
 import { useLogin } from '../hooks/useLogin';
+import GoogleLoginButton from '../components/GoogleLoginButton';
 
 
 export default function page() {
@@ -33,9 +34,9 @@ export default function page() {
             }
         )
     }
-  
+
     return (
-        <div className='container my-30 mx-auto flex justify-center items-center'>
+        <div className='container my-30 mx-auto flex flex-col gap-5 justify-center items-center'>
             <form onSubmit={handleSubmit} className='text-white w-[50%] flex flex-col gap-y-10'>
                 <div>
                     <label className='font-cairo font-medium text-[20px]'>
@@ -70,6 +71,12 @@ export default function page() {
                     />
                 </div>
             </form>
+            <h1 className="text-green-300 text-3xl font-bold mb-2">
+                Login with Google
+            </h1>
+
+            <GoogleLoginButton />
         </div>
     )
 }
+

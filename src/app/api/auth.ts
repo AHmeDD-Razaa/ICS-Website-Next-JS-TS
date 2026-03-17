@@ -9,3 +9,4 @@ export const loginUser = async (data:any) => {
 
   return response.data
 }
+

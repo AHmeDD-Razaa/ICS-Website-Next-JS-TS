@@ -12,6 +12,7 @@ import { useAppDispatch, useAppSelector } from "./hooks";
 import { decrement, increment } from "@/redux/Slices/counter";
 import Counter from "./components/Counter";
 import ReduxProvider from "./providers/ReduxProvider";
+import GoogleProvider from "./providers/GoogleProvider";
 
 const cairo = Cairo({
   variable: "--font-cairo",
@@ -38,13 +39,13 @@ export default function RootLayout({
 
         <ReduxProvider>
           <ReactQueryProvider>
-
+            <GoogleProvider>
             <Header />
 
             {children}
 
             <Footer />
-
+            </GoogleProvider>
           </ReactQueryProvider>
         </ReduxProvider>
 
